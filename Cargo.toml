@@ -1,12 +1,12 @@
 [package]
 name = "openapi-path-filter"
-version = "0.1.7"
+version = "0.1.8"
 edition = "2021"
 
 [lib]
-crate-type = ["cdylib"]         # WASM 모듈로 컴파일하기 위해 필요
-name = "openapi_path_filter"    # 라이브러리 이름은 반드시 언더스코어 사용
-path = "src/lib.rs"             # 라이브러리 소스 위치
+crate-type = ["cdylib"]      # WASM 모듈로 컴파일하기 위해 필요
+name = "openapi_path_filter" # 라이브러리 이름은 반드시 언더스코어 사용
+path = "src/lib.rs"          # 라이브러리 소스 위치
 
 
 [dependencies]

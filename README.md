@@ -17,6 +17,7 @@ A Rust-based Istio WASM filter that injects a Prometheus label representing the 
 - ✅ cargo/docker image version 자동 동기화(`${CARGO_MAKE_CRATE_VERSION}` in `Makefile.toml`)
 - ✅ image optimization (`wasm-opt` 도입)
 - ✅ Fast fail, optimization 포함 build step 정렬
+- ✅ Single thread 용으로 전환(`Rc<T>` 사용). proxy WASM은 single thread로 동작하므로.
 - 🚧 `proxy-wasm-test-framework = { git = "https://github.com/proxy-wasm/test-framework" }` 사용하여 테스트 가능하도록: runtime 검증용. 이게 되기 전까지는 [runtime 테스트 방법 in istio](#runtime-테스트-방법-in-istio) 로 검증해야.
 - 💧 **LRU 캐시 도입**: `lru` lib이 적절하지만 read에 조차 lock을 써야하기에 오히려 성능 저하 크고 복잡도가 증가. `cache` branch 참조.
 
